@@ -1,0 +1,10 @@
+version: '3'
+services:
+  node:
+    build: .
+    container_name: react-app
+    volumes:
+      - ./:/usr/src/app
+    command: sh -c "cd react-sample && yarn start"
+    ports:
+      - "5050:3000"
